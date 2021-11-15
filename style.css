@@ -1,0 +1,162 @@
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: black;
+  font-size: 1.2rem; /*mida de les lletres*/
+  line-height: 1.6em; /* interlineat */
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.3em;
+}
+
+/* paràgrafs */
+p {
+  margin-bottom: 1.6em; /*marge inferior funciona com enter entre paràgrafs*/
+}
+
+.container {
+  width: 85%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.header {
+  background: #333;
+  color: white;
+  padding: 2rem 0;
+
+  /* Fer el menu fixe */
+  position: fixed;
+  left: 0;
+  top: 0;
+  /* ocuapem tot l'ample */
+  right: 0;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+}
+
+.logo-nav-container {
+  display: flex;
+  justify-content: space-between;
+  /* el alineem a centre */
+  align-items: center;
+
+  flex-wrap: wrap;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* tots els "ul" que estan dins de "navigation" */
+.navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation ul li {
+  /* un al costas del altre */
+  display: inline-block;
+}
+
+/* els enllaços dins de menú */
+.navigation ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s linear;
+  border-radius: 5px;
+}
+
+.navigation ul li a:hover {
+  background: #cc4444;
+}
+
+.main {
+  padding-top: 12rem;
+}
+
+/*PEU DE PÀGINA*/
+.footer {
+  background: #333;
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: 6rem;
+}
+.footer {
+    font-size: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 0.8em;
+    color:#D93925;
+}
+
+
+.menu-link{
+    color: black;
+}
+
+.fb{
+    color: blue;
+}
+/* REPONSIVE */
+/* totes les característiques que es mostressin a continuació seran quan tingui un ample màxim de 767px */
+
+@media only screen and (max-width: 767px) {
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+
+    .navigation{
+        width: 100%;
+    }
+    .navigation ul{
+        display: none;
+    }
+    .navigation ul.show{
+        display: block;
+    }
+      
+    .navigation ul li {
+        display: block;
+      }
+      
+      /* els enllaços dins del menú */
+      .navigation ul li a {
+        display: block;
+        padding: 0.5rem 1rem;
+        transition: all 0.2s linear;
+        border-radius: 5px;
+      }
+      /* contorn */
+      .navigation ul li a:hover {
+        background: #cc4444;
+      }
+}
+
+.gallery {
+  margin: 60px;
+  border: 1px solid #ccc;
+  float: right;
+  width: 180px;
+}
+
+.gallery:hover {
+  border: 200px solid #777;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.desc {
+  padding: 15px;
+  text-align: center;
+}
